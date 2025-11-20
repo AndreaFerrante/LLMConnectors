@@ -1,0 +1,27 @@
+# Include important documentation files
+include README.md
+include LICENSE
+include CHANGELOG.md
+include pyproject.toml
+include setup.py
+
+# Include type information
+include llmconnectors/py.typed
+
+# Include example .env template
+include .env_template
+
+# Exclude development and build artifacts
+global-exclude __pycache__
+global-exclude *.py[cod]
+global-exclude *$py.class
+global-exclude *.so
+global-exclude .DS_Store
+
+# Exclude tests and examples from distribution
+prune tests
+prune examples
+prune .github
+exclude .gitignore
+exclude .env
+exclude main.py

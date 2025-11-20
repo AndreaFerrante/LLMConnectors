@@ -1,0 +1,104 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llmconnectors"
+version = "1.0.0"
+description = "A unified Python client library for multiple LLM providers (OpenAI, Anthropic Claude, Perplexity) with async support, retry logic, and type safety"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Andrea Ferrante", email = "your.email@example.com"}
+]
+maintainers = [
+    {name = "Andrea Ferrante", email = "your.email@example.com"}
+]
+keywords = [
+    "llm",
+    "openai",
+    "anthropic",
+    "claude",
+    "perplexity",
+    "ai",
+    "machine-learning",
+    "async",
+    "api-client",
+    "chatgpt",
+    "gpt-4",
+    "nlp"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Typing :: Typed",
+]
+dependencies = [
+    "httpx>=0.24.0",
+    "pydantic>=2.0.0",
+    "python-dotenv>=1.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+    "pytest-cov>=4.0.0",
+    "black>=23.0.0",
+    "isort>=5.12.0",
+    "mypy>=1.0.0",
+    "ruff>=0.1.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/llmconnectors"
+Documentation = "https://github.com/yourusername/llmconnectors#readme"
+Repository = "https://github.com/yourusername/llmconnectors"
+Issues = "https://github.com/yourusername/llmconnectors/issues"
+Changelog = "https://github.com/yourusername/llmconnectors/blob/main/CHANGELOG.md"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["llmconnectors*"]
+exclude = ["tests*", "examples*"]
+
+[tool.setuptools.package-data]
+llmconnectors = ["py.typed"]
+
+[tool.black]
+line-length = 100
+target-version = ['py39']
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
+disallow_incomplete_defs = false
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
