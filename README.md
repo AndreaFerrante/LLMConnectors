@@ -340,9 +340,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Support
 
-- 📧 Email: your.email@example.com
-- 🐛 Issues: [GitHub Issues](https://github.com/yourusername/llmconnectors/issues)
-- 💬 Discussions: [GitHub Discussions](https://github.com/yourusername/llmconnectors/discussions)
+- 📧 Email: nonicknamethankyou@gmail.com
+- 🐛 Issues: [GitHub Issues](https://github.com/AndreaFerrante/llmconnectors/issues)
+- 💬 Discussions: [GitHub Discussions](https://github.com/AndreaFerrante/llmconnectors/discussions)
 
 ## Citation
 
